@@ -22,7 +22,7 @@ fun FeaturedNewsCard(item: NewsItem) {
     ) {
         Column(modifier = Modifier.padding(8.dp)) {
 
-            // 🔹 Banner image placeholder
+            // Banner image placeholder
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -40,7 +40,7 @@ fun FeaturedNewsCard(item: NewsItem) {
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // 🔹 Title
+            // Title
             Text(
                 text = item.title,
                 style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
@@ -49,7 +49,7 @@ fun FeaturedNewsCard(item: NewsItem) {
 
             Spacer(modifier = Modifier.height(4.dp))
 
-            // 🔹 Snippet
+            // Snippet
             Text(
                 text = item.snippet,
                 style = MaterialTheme.typography.bodyLarge,
@@ -58,7 +58,7 @@ fun FeaturedNewsCard(item: NewsItem) {
 
             Spacer(modifier = Modifier.height(4.dp))
 
-            // 🔹 Source & Date
+            // Source & Date
             Text(
                 text = "Izvor: ${item.source} • ${item.publishedDate}",
                 style = MaterialTheme.typography.labelSmall
