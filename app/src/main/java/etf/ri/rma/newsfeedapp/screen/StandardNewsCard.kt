@@ -21,7 +21,7 @@ fun StandardNewsCard(item: NewsItem) {
     ) {
         Row(modifier = Modifier.padding(8.dp)) {
 
-            // 👇 Image placeholder box
+            // Image placeholder box
             Box(
                 modifier = Modifier
                     .size(80.dp)
@@ -38,7 +38,7 @@ fun StandardNewsCard(item: NewsItem) {
 
             Spacer(modifier = Modifier.width(12.dp))
 
-            // 👇 Textual content
+            // Textual content
             Column(
                 modifier = Modifier
                     .weight(1f)
