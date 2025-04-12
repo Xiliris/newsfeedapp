@@ -20,7 +20,6 @@ fun StandardNewsCard(item: NewsItem) {
     ) {
         Row(modifier = Modifier.padding(8.dp)) {
 
-            // 👇 Image placeholder box
             // Banner image placeholder
             Image(
                 painter = painterResource(id = R.drawable.placeholder),
@@ -31,7 +30,7 @@ fun StandardNewsCard(item: NewsItem) {
 
             Spacer(modifier = Modifier.width(12.dp))
 
-            // 👇 Textual content
+            //  Textual content
             Column(
                 modifier = Modifier
                     .weight(1f)
