@@ -1,4 +1,4 @@
-import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
@@ -6,10 +6,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import etf.ri.rma.newsfeedapp.R
 import etf.ri.rma.newsfeedapp.model.NewsItem
 
 @Composable
@@ -22,19 +21,13 @@ fun StandardNewsCard(item: NewsItem) {
         Row(modifier = Modifier.padding(8.dp)) {
 
             // 👇 Image placeholder box
-            Box(
+            // Banner image placeholder
+            Image(
+                painter = painterResource(id = R.drawable.placeholder),
+                contentDescription = "Banner image",
                 modifier = Modifier
-                    .size(80.dp)
-                    .background(Color.LightGray),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "IMG",
-                    fontSize = 12.sp,
-                    color = Color.DarkGray,
-                    textAlign = TextAlign.Center
-                )
-            }
+                    .height(80.dp)
+            )
 
             Spacer(modifier = Modifier.width(12.dp))
 
