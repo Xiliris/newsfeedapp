@@ -1,3 +1,5 @@
+package etf.ri.rma.newsfeedapp.screen
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Card

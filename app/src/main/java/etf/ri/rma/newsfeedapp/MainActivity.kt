@@ -1,6 +1,6 @@
 package etf.ri.rma.newsfeedapp
 
-import NewsFeedScreen
+import etf.ri.rma.newsfeedapp.screen.NewsFeedScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

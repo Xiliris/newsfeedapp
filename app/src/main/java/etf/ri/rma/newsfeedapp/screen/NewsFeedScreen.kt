@@ -1,3 +1,5 @@
+package etf.ri.rma.newsfeedapp.screen
+
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 
 import etf.ri.rma.newsfeedapp.data.NewsData
@@ -37,7 +40,13 @@ fun filterNews(news: List<NewsItem>, category: String): List<NewsItem> {
 
 @Composable
 fun FilterChips(selected: String, onCategorySelected: (String) -> Unit) {
-    val categories = listOf("Sve", "Politika", "Sport", "Nauka/tehnologija", "Ne Postoji")
+    val categories = listOf("Sve", "Politika", "Sport", "Nauka/tehnologija")
+    val categoryTags = mapOf(
+        "Sve" to "filter_chip_all",
+        "Politika" to "filter_chip_pol",
+        "Sport" to "filter_chip_spo",
+        "Nauka/tehnologija" to "filter_chip_sci"
+    )
 
     Row(
         modifier = Modifier
@@ -54,6 +63,7 @@ fun FilterChips(selected: String, onCategorySelected: (String) -> Unit) {
                 },
                 label = { Text(category) },
                 modifier = Modifier.padding(2.dp)
+                    .testTag(categoryTags[category] ?: "")
             )
         }
     }
